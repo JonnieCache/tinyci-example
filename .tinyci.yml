@@ -1,13 +1,5 @@
-builder:
-  class: ScriptBuilder
-  config:
-    command: ./build.sh
-tester:
-  class: ScriptTester
-  config:
-    command: ./test.sh
-hooker:
-  class: ScriptHooker
-  config:
-    after_build_success: ./after_build_success.sh
-    after_test_success: ./after_test_success.sh
+build: ./build.sh
+test: ./test.sh
+hooks:
+  after_build_success: ./after_build_success.sh
+  after_test_success: ./after_test_success.sh
